@@ -1,0 +1,19 @@
+Assignment name  : swap_bits
+Expected files   : swap_bits.c
+Allowed functions:
+---------------------------------------------------------------
+
+Write a function that swaps the upper 4 bits with the lower 4 bits
+of a byte.
+
+Your function must be declared as follows:
+
+unsigned char    swap_bits(unsigned char octet);
+
+Example:
+
+Input:
+10110010
+
+Return:
+00101011

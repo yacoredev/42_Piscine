@@ -1,0 +1,17 @@
+Assignment name  : print_bits
+Expected files   : print_bits.c
+Allowed functions: write
+---------------------------------------------------------------
+
+Write a function that prints the bits of a byte.
+
+Your function must be declared as follows:
+
+void    print_bits(unsigned char octet);
+
+Example:
+
+octet = 2
+
+Output:
+00000010

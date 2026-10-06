@@ -1,0 +1,416 @@
+Assignment name  : shift
+Expected files   : shift.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and a number n as arguments.
+
+The program must shift each lowercase letter of the string by n positions
+in the alphabet. If a letter goes beyond 'z', it must continue again from 'a'.
+
+The program displays the resulting string followed by a newline.
+
+If the number of arguments is not 2, the program displays a newline.
+
+Examples:
+
+$> ./shift "abc" 2 | cat -e
+cde$
+$> ./shift "xyz" 2 | cat -e
+zab$
+$> ./shift "hello" 30 | cat -e
+lipps$
+$>
+================================================================================
+Assignment name  : move_zero
+Expected files   : move_zero.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a list of integers as arguments.
+
+The program must move all the zeros to the end of the list, while keeping the
+order of the other integers unchanged.
+
+The program displays the resulting list, with a space between each integer,
+followed by a newline.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./move_zero 1 3 4 0 6 4 5 0 8 | cat -e
+1 3 4 6 4 5 8 0 0$
+$> ./move_zero 0 1 0 2 3 0 | cat -e
+1 2 3 0 0 0$
+$> ./move_zero 1 2 3 | cat -e
+1 2 3$
+$>
+=================================================================================
+Assignment name  : has_duplicate
+Expected files   : has_duplicate.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a list of integers as arguments.
+
+The program must check if a number appears more than once in the list.
+
+If a duplicate number is found, the program displays `1`, otherwise it displays
+`0`, followed by a newline.
+
+If the number of arguments is less than 2, the program displays `0`.
+
+Examples:
+
+$> ./has_duplicate 1 2 3 4 | cat -e
+0$
+$> ./has_duplicate 1 2 3 1 | cat -e
+1$
+$> ./has_duplicate 5 8 2 7 8 3 | cat -e
+1$
+$> ./has_duplicate 1 2 3 4 5 | cat -e
+0$
+$>
+====================================================================================
+Assignment name  : max_subarray
+Expected files   : max_subarray.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a list of integers as arguments.
+
+The program must find the contiguous subarray with the largest sum and display
+its sum followed by a newline.
+
+If the number of arguments is less than 1, the program displays `0`.
+
+Examples:
+
+$> ./max_subarray -2 1 -3 4 -1 2 1 -5 4 | cat -e
+6$
+$> ./max_subarray 1 2 3 4 | cat -e
+10$
+$> ./max_subarray -5 -2 -8 -1 | cat -e
+-1$
+$>
+=======================================================================================
+Assignment name  : missing_number
+Expected files   : missing_number.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a sequence of distinct integers as arguments.
+
+The integers are taken from the range `0` to `n`, where `n` is the number of
+arguments.
+
+Exactly one number from this range is missing.
+
+The program must find and display the missing number followed by a newline.
+
+Examples:
+
+$> ./missing_number 3 0 1 | cat -e
+2$
+$> ./missing_number 0 1 | cat -e
+2$
+$> ./missing_number 9 6 4 2 3 5 7 0 1 | cat -e
+8$
+$>
+=========================================================================================
+Assignment name  : search_insert
+Expected files   : search_insert.c
+Allowed functions: None
+-----------------------
+
+Write a function that takes a sorted array of distinct integers, its size, and
+a target integer as arguments.
+
+The function must return the index of the target if it is found in the array.
+
+If the target is not found, return the index where it should be inserted in
+order to keep the array sorted.
+
+The function must return `0` if the array is empty.
+
+Examples:
+
+```text
+Input:
+nums = [1, 3, 5, 6]
+target = 5
+
+Output:
+2
+```
+
+```text
+Input:
+nums = [1, 3, 5, 6]
+target = 2
+
+Output:
+1
+```
+
+```text
+Input:
+nums = [1, 3, 5, 6]
+target = 7
+
+Output:
+4
+```
+===========================================================================================
+
+Assignment name  : most_frequent
+Expected files   : most_frequent.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string as an argument.
+
+The program must display the character that appears the most times in the
+string, followed by a newline.
+
+If several characters appear the same maximum number of times, the program
+must display the character with the smallest ASCII value.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./most_frequent "aaabbcc" | cat -e
+a$
+$> ./most_frequent "aazzbb" | cat -e
+a$
+$> ./most_frequent "hello" | cat -e
+l$
+$> ./most_frequent "abcabc" | cat -e
+a$
+$>
+===============================================================================================
+Assignment name  : reverse_words
+Expected files   : reverse_words.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string as an argument.
+
+The program must display the words of the string in reverse order, separated by
+a single space, followed by a newline.
+
+A word is a sequence of characters separated by spaces or tabs.
+
+Spaces and tabs at the beginning and end of the string must be ignored.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./reverse_words "hello world" | cat -e
+world hello$
+$> ./reverse_words "hello how are you" | cat -e
+you are how hello$
+$> ./reverse_words "  hello    world  " | cat -e
+world hello$
+$> ./reverse_words "one two three four" | cat -e
+four three two one$
+$> ./reverse_words "hello" | cat -e
+hello$
+$>
+=================================================================================================
+Assignment name  : reverse_words
+Expected files   : reverse_words.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string as an argument.
+
+The program must reverse each word of the string while keeping the order of
+the words unchanged.
+
+Words are separated by spaces or tabs.
+
+The program displays the resulting string followed by a newline.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./reverse_words "hello world" | cat -e
+olleh dlrow$
+$> ./reverse_words "hello how are you" | cat -e
+olleh woh era uoy$
+$> ./reverse_words "abc def ghi" | cat -e
+cba fed ihg$
+$>
+===================================================================================================
+Assignment name  : longest_word
+Expected files   : longest_word.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string as an argument.
+
+The program must display the longest word in the string, followed by a newline.
+
+A word is a sequence of characters separated by spaces or tabs.
+
+If several words have the same length, the first one must be displayed.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./longest_word "one two three" | cat -e
+three$
+$> ./longest_word "hello hi world" | cat -e
+hello$
+$> ./longest_word "a programming language" | cat -e
+programming$
+$> ./longest_word "one two six" | cat -e
+one$
+$>
+====================================================================================================
+Assignment name  : valid_parentheses
+Expected files   : valid_parentheses.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string containing parentheses as an argument.
+
+The program must check if the parentheses are correctly balanced and properly
+nested.
+
+The valid pairs are `()`, `[]` and `{}`.
+
+The program displays `1` if the string is valid, otherwise it displays `0`,
+followed by a newline.
+
+If the number of arguments is not 1, the program displays `0`.
+
+Examples:
+
+$> ./valid_parentheses "()" | cat -e
+1$
+$> ./valid_parentheses "()[]{}" | cat -e
+1$
+$> ./valid_parentheses "([{}])" | cat -e
+1$
+$> ./valid_parentheses "(]" | cat -e
+0$
+$> ./valid_parentheses "([)]" | cat -e
+0$
+$>
+=====================================================================================================
+Assignment name  : sum_digits
+Expected files   : sum_digits.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string as an argument.
+
+The program must replace each sequence of consecutive digits by the sum of
+the digits in that sequence.
+
+All non-digit characters must remain unchanged.
+
+The program displays the resulting string followed by a newline.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./sum_digits "hello45hell23" | cat -e
+hello9hell5$
+$> ./sum_digits "abc123def45" | cat -e
+abc6def9$
+$> ./sum_digits "12hello3world456" | cat -e
+3hello3world15$
+$> ./sum_digits "hello" | cat -e
+hello$
+$>
+======================================================================================================
+Assignment name  : decode_rle
+Expected files   : decode_rle.c
+Allowed functions: write
+------------------------
+
+Write a program that takes a string encoded using Run-Length Encoding (RLE) as
+an argument.
+
+The string is composed of a number followed by a character.
+
+The program must decode the string by repeating each character the number of
+times specified before it.
+
+The decoded string must be displayed followed by a newline.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Examples:
+
+$> ./decode_rle "3a2b4c" | cat -e
+aaabbcccc$
+$> ./decode_rle "5h1e2l1o" | cat -e
+hhhhhello$
+$> ./decode_rle "2a3b1c" | cat -e
+aabbb c$
+$> ./decode_rle "4x2y" | cat -e
+xxxxyy$
+$>
+=======================================================================================================
+Assignment name  : valid_anagram
+Expected files   : valid_anagram.c
+Allowed functions: write
+------------------------
+
+Write a program that takes two strings as arguments.
+
+The program must check if the two strings are anagrams of each other.
+
+Two strings are anagrams if they contain the same characters with the same
+number of occurrences, regardless of their order.
+
+The program displays `1` if the strings are anagrams, otherwise it displays
+`0`, followed by a newline.
+
+If the number of arguments is not 2, the program displays `0`.
+
+Examples:
+
+$> ./valid_anagram "anagram" "nagaram" | cat -e
+1$
+$> ./valid_anagram "rat" "car" | cat -e
+0$
+$> ./valid_anagram "listen" "silent" | cat -e
+1$
+$>
+=======================================================================================================
+Assignment name  : gcd
+Expected files   : gcd.c
+Allowed functions: write
+------------------------
+
+Write a program that takes two positive integers as arguments.
+
+The program must calculate the greatest common divisor (GCD) of the two
+integers.
+
+The program displays the GCD followed by a newline.
+
+If the number of arguments is not 2, the program displays a newline.
+
+Examples:
+
+$> ./gcd 12 18 | cat -e
+6$
+$> ./gcd 25 15 | cat -e
+5$
+$> ./gcd 7 3 | cat -e
+1$
+$>
+=======================================================================================================
+

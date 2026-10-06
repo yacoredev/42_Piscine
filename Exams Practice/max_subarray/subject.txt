@@ -1,0 +1,22 @@
+Assignment name  : max_subarray
+Expected files   : max_subarray.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Write a function that returns the sum of the largest subarray.
+
+A subarray is a contiguous part of an array.
+
+Your function must be declared as follows:
+
+int max_subarray(int *arr, unsigned int n);
+
+If n is 0, return 0.
+
+The array may contain positive, negative or zero values.
+
+arr = {2, -8, 3, -2, 4, -10}
+
+Subarrays:
+
+{3,-2,4} = 5   <-- max

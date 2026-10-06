@@ -1,0 +1,48 @@
+Assignment name : rotate_args
+
+Expected files: rotate_args.c
+
+Allowed functions: write
+
+Subject
+
+Write a program that rotates the command-line arguments to the left by k positions.
+
+The first argument is always an integer k.
+
+The remaining arguments must be rotated.
+
+If there are fewer than 2 arguments (only program name or no values to rotate), the program must display a newline.
+
+The value of k can be greater than the number of arguments. In that case, rotate by:
+
+k % number_of_arguments
+
+Print each rotated argument separated by a single space, followed by a newline.
+
+You may not allocate memory.
+
+Prototype
+
+No function prototype required.
+
+Examples
+$> ./rotate_args 2 1 7 4 5
+4 5 1 7
+$> ./rotate_args 1 hello world exam
+world exam hello
+$> ./rotate_args 0 a b c
+a b c
+$> ./rotate_args 5 A B C
+C A B
+
+because
+
+5 % 3 = 2
+$> ./rotate_args 9 one two three four
+two three four one
+
+because
+
+9 % 4 = 1
+$> ./rotate_args
